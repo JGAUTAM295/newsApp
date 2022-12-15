@@ -64,8 +64,6 @@ const fetchNews = async (category?: Category | string,
         }),
     });
 
-    console.log(await res.json());
-
     // console.log(
     //     "LOADING NEW DATA FROM API FOR CATEGORY >>>",
     //     category,
@@ -73,8 +71,6 @@ const fetchNews = async (category?: Category | string,
     // );
 
     const newsResponse = await res.json();
-
-    console.log(newsResponse);
 
     //Sort funtion by images vs not image present
 

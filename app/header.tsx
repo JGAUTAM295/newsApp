@@ -24,7 +24,7 @@ function Header() {
             {/* SearchBox */}
             <SearchBox />
         </header>
-    )
+    );
 }
 
 export default Header;

@@ -10,8 +10,8 @@ function ReadMoreButton({ article }: Props) {
 
     const handleClick = () => {
         const queryString = Object.entries(article).map(([key, value]) => `${key}=${value}`).join("&");
-        const url = `article?${queryString}`;
-        console.log(url);
+        const url = `/article?${queryString}`;
+
         router.push(url);
     };
     return (

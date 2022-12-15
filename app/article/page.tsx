@@ -4,11 +4,13 @@ type Props = {
     searchParams?: Article;
 }
 function ArticlePage({ searchParams }: Props) {
+    console.log(searchParams);
     if ((searchParams && Object.entries(searchParams).length === 0) ||
         !searchParams) {
         return notFound();
     }
     const article: Article = searchParams;
+
     return (
         <article>
             <section className="flex flex-col lg:flex-row pb-24 px-0 lg:px-10">
