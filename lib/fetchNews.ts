@@ -1,7 +1,8 @@
 import { gql } from 'graphql-request';
 import sortNewsByImage from './sortNewsByImage';
 
-const fetchNews = async (category?: Category | string,
+const fetchNews = async (
+    category?: Category | string,
     keywords?: string,
     isDynamic?: boolean) => {
 
@@ -20,28 +21,26 @@ const fetchNews = async (category?: Category | string,
             countries: "gb"
             sort: "published_desc"
             keywords: $keywords
-            )
-        {
+          ) {
             data {
-                author
-                category
-                image
-                description
-                country
-                language
-                published_at
-                source
-                title
-                url
+              author
+              category
+              country
+              description
+              image
+              language
+              published_at
+              source
+              title
+              url
             }
             pagination {
-                count
-                limit
-                offset
-                total
+              count
+              offset
+              limit
+              total
             }
-        }
-
+          }
     }`;
 
     //Fetch functiom with Next.js 13 caching....
@@ -64,11 +63,11 @@ const fetchNews = async (category?: Category | string,
         }),
     });
 
-    // console.log(
-    //     "LOADING NEW DATA FROM API FOR CATEGORY >>>",
-    //     category,
-    //     keywords
-    // );
+    console.log(
+        "LOADING NEW DATA FROM API FOR CATEGORY >>>",
+        category,
+        keywords
+    );
 
     const newsResponse = await res.json();
 

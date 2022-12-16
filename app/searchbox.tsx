@@ -25,7 +25,7 @@ function SearchBox() {
                 disabled={!input}
                 className="text-orange-400 disabled:text-gray-400">Search</button>
         </form>
-    )
+    );
 }
 
 export default SearchBox;

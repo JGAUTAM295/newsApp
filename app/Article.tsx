@@ -2,7 +2,7 @@ import LiveTimestamp from "./LiveTimestamp";
 import ReadMoreButton from "./ReadMoreButton";
 
 type Props = {
-    article: Article
+    article: Article;
 }
 
 function Article({ article }: Props) {

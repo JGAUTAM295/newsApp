@@ -2,7 +2,6 @@ import fetchNews from "../../lib/fetchNews";
 import NewsList from "../NewsList";
 
 type Props = {
-
     searchParams?: { term: string };
 }
 async function SearchPage({ searchParams }: Props) {
@@ -11,6 +10,7 @@ async function SearchPage({ searchParams }: Props) {
         searchParams?.term,
         true
     );
+
     return (
         <div>
             <h1 className="headerTitle">Search Result For: {searchParams?.term}</h1>
